@@ -5,13 +5,10 @@ const tableData = data;
 var tbody = d3.select("tbody");
 
 function buildTable(data) {
-  // First, clear out any existing data
+
   tbody.html("");
 
-  // Next, loop through each object in the data
-  // and append a row and cells for each value in the row
   data.forEach((dataRow) => {
-    // Append a row to the table body
     let row = tbody.append("tr");
 
     // Loop through each field in the dataRow and add
@@ -23,7 +20,6 @@ function buildTable(data) {
   });
 }
 
-// Variable to keep track of all the filters as an object
 var filters = {}
 
 
