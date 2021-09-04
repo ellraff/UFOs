@@ -7,8 +7,7 @@ var tbody = d3.select("tbody");
 // Clear existing data
 function buildTable(data) {
     tbody.html("");
-  }
-
+  
   data.forEach((dataRow) => {
     let row = tbody.append("tr");
     Object.values(dataRow).forEach((val) => {
@@ -17,6 +16,7 @@ function buildTable(data) {
         }
     );
 });
+}
 
 function handleClick() {
     let date = d3.select("#datetime").property("value");
